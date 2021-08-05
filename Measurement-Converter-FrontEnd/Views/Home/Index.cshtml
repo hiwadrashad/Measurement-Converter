@@ -1,0 +1,14 @@
+﻿@model Measurement_Converter_FrontEnd.Models.TestModel
+<div class="text-center">
+    <h1>testthis</h1>
+    <form asp-action="Index" asp-controller="Home">
+        <div>
+            <input asp-for="Name" type="text">
+        </div>
+        <div>
+            <input type="submit" value="postthis" />
+        </div>
+    </form>
+    <label>@Model.Name</label>
+
+</div>
