@@ -18,9 +18,11 @@ namespace Measurement_Converter_Library.Logging
             File.AppendAllText(mainpath + @"Logs\" + "log.txt", DTO.Calculation + " : " + DTO.Date + Environment.NewLine);
         }
 
-        public static void WriteErrorLog()
-        { 
-         
+        public static void WriteErrorLog(Measurement_Converter_Library.DTOs.ErrorLoggingObj DTO)
+        {
+            string fullpath = System.IO.Directory.GetCurrentDirectory();
+            string mainpath = Path.GetFullPath(Path.Combine(fullpath, @"..\..\..\"));
+            File.AppendAllText(mainpath + @"Logs\" + "log.txt", DTO.Error + " : " + DTO.Date + Environment.NewLine);
         }
     }
 }

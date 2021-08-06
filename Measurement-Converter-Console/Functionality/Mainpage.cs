@@ -79,7 +79,7 @@ namespace Measurement_Converter_Console.Functionality
             catch (Exception ex)
 #pragma warning restore CS0168 // Variable is declared but never used
             {
-                Functionality.ErrorCatchingPage.ExecuteErrorCatching();
+                Functionality.ErrorCatchingPage.ExecuteErrorCatching(ex);
             }
         }
 
