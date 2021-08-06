@@ -14,5 +14,10 @@ namespace Measurement_Converter_FrontEnd.Controllers
         {
             return View();
         }
+
+        public ActionResult ValueInputPage()
+        {
+            return View();
+        }
     }
 }
