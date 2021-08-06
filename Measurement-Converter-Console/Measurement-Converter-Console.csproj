@@ -10,4 +10,8 @@
     <ProjectReference Include="..\Measurement-Converter-Library\Measurement-Converter-Library.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Logs\" />
+  </ItemGroup>
+
 </Project>
