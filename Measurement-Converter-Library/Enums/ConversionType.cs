@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Measurement_Converter_Library.Enums
 {
+    /// <summary>
+    /// types of calculations
+    /// </summary>
     public enum ConversionType
     {
         MeterToCentimeter,

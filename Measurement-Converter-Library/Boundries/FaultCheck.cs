@@ -9,6 +9,7 @@ namespace Measurement_Converter_Library.BoundryChecks
 {
     public class FaultCheck
     {
+        //check if input is a proper value for the main page
         public static bool IsInputFaultyMainPage(char input)
         {
             List<char> CharsTocheck = new List<char>() { '1', '2', '3', '4', '5', '6', '7' };
@@ -21,6 +22,8 @@ namespace Measurement_Converter_Library.BoundryChecks
             }
             return true;
         }
+
+        //check if input is a proper value for the end page
 
         public static bool IsInputFaultyEndPage(char input)
         {
@@ -35,6 +38,7 @@ namespace Measurement_Converter_Library.BoundryChecks
             return true;
         }
 
+        //check if input is a proper value for the given number to convert
 
         public static bool IsValueToCalculateFaulty(string input)
         {

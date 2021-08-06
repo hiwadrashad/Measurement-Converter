@@ -8,6 +8,9 @@ namespace Measurement_Converter_Library.Settings
 {
     public class Cultures
     {
+        /// <summary>
+        /// set culture settings
+        /// </summary>
         public static void SetCulture()
         {
             System.Globalization.CultureInfo customCulture = (System.Globalization.CultureInfo)System.Threading.Thread.CurrentThread.CurrentCulture.Clone();
