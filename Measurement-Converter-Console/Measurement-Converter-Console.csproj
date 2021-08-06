@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Functionality\" />
+    <ProjectReference Include="..\Measurement-Converter-Library\Measurement-Converter-Library.csproj" />
   </ItemGroup>
 
 </Project>

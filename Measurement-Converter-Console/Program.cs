@@ -6,8 +6,10 @@ namespace Measurement_Converter_Console
     {
         static void Main(string[] args)
         {
-            
-            Console.WriteLine("");
+            //startpage
+            Functionality.StartScreen.ExecuteStartScreen();
+            //mainpage
+            Functionality.Mainpage.ExecuteMainPage();
         }
     }
 }
