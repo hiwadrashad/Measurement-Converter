@@ -1,4 +1,5 @@
-﻿<style>
+﻿@model Measurement_Converter_Library.ViewModels.ValueInputViewModel
+<style>
 
     @@media screen and (min-width: 1367px) {
         .pagewidth {
@@ -31,7 +32,7 @@
 
 
     .textlabel {
-        transform: translate(3vw,3vw) !important;
+        transform: translate(-3vw,3vw) !important;
     }
 
     @@media screen and (max-width: 1367px) {
@@ -140,7 +141,8 @@
                                 <div id="desc-tabs" class="desc-tabs">
 
 
-
+                                  
+                                   <form asp-action="ValueInputPage" asp-controller="Page">
                                     <!-- Tab panes -->
                                     <div class="tab-content">
 
@@ -153,9 +155,7 @@
 
 
 
-                                                            <input type="text" class="form-control textinput ">
-
-
+                                                            <input asp-for="StringValue" type="text" class="form-control textinput ">
 
                                                             </input><!-- /.select-->
 
@@ -185,9 +185,9 @@
                                                     </div><!--/.col-->
                                                     <div class="clo-sm-7">
                                                         <div class="about-btn travel-mrt-0 pull-right">
-                                                            <button class="about-view travel-btn">
+                                                            <button type="submit" class="about-view travel-btn">
                                                                 Continue
-                                                            </button><!--/.travel-btn-->
+                                                            </input><!--/.travel-btn-->
                                                         </div><!--/.about-btn-->
                                                     </div><!--/.col-->
 
@@ -200,6 +200,7 @@
 
 
                                     </div><!--/.col-->
+                                   </form>
                                 </div><!--/.row-->
                             </div><!--/.container-->
 

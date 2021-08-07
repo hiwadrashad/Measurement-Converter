@@ -1,5 +1,4 @@
-﻿@model Measurement_Converter_Library.ViewModels.ValueInputViewModel
-<style>
+﻿<style>
 
     @@media screen and (min-width: 1367px) {
         .pagewidth {
@@ -32,7 +31,7 @@
 
 
     .textlabel {
-        transform: translate(-3vw,3vw) !important;
+        transform: translate(3vw,3vw) !important;
     }
 
     @@media screen and (max-width: 1367px) {
@@ -41,8 +40,12 @@
         }
     }
 
-    .value-text {
-    width: 500px;
+    .buttonadjustment {
+        transform: translateY(-1.5vw);
+    }
+
+    .btndiscolerationadjustment {
+    color: white;
     }
 </style>
 <head>
@@ -173,7 +176,7 @@
 
                                                     <div class="col-lg-2 col-md-3 col-sm-4 textlabel">
                                                         <div class="single-tab-select-box">
-                                                            <h2 class="value-text">The converted value is : @Model.DTO.value</h2>
+                                                            <h2>Wrong value entered</h2>
                                                         </div>
                                                     </div><!--/.col-->
 
@@ -190,8 +193,10 @@
                                                     </div><!--/.col-->
                                                     <div class="clo-sm-7">
                                                         <div class="about-btn travel-mrt-0 pull-right">
-                                                            <button class="about-view travel-btn">
-                                                                Continue
+                                                            <button class="about-view travel-btn buttonadjustment">
+                                                            <a class="btndiscolerationadjustment" href="Page/Frontpage">
+                                                                continue
+                                                            </a>
                                                             </button><!--/.travel-btn-->
                                                         </div><!--/.about-btn-->
                                                     </div><!--/.col-->
