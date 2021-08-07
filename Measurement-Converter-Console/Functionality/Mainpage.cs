@@ -19,12 +19,15 @@ namespace Measurement_Converter_Console.Functionality
             {
                 //clear screen
                 Console.Clear();
+                Console.ForegroundColor = ConsoleColor.White;
                 //give instructions
                 Console.WriteLine("\n");
                 Console.WriteLine("Type number of choicen option");
                 Console.WriteLine("\n");
                 Console.WriteLine("---------------------------------------------------------------------------------------");
                 //give options
+                Console.ForegroundColor = ConsoleColor.Cyan;
+
                 Console.WriteLine("\n");
                 Console.WriteLine("1 : Meter to centimeter");
                 Console.WriteLine("\n");

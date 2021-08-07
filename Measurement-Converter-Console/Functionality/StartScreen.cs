@@ -25,6 +25,7 @@ namespace Measurement_Converter_Console.Functionality
                 Console.WriteLine(@"        \/     \/     \/     \/            \/            \/     \/     \/               \/            \/          \/                 \/       ");
                 Console.WriteLine("\n");
                 // go to other page
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine("Hit enter to start program");
                 Console.ReadLine();
                 Functionality.Mainpage.ExecuteMainPage();

@@ -12,6 +12,7 @@ namespace Measurement_Converter_Console.Functionality
         {
             try
             {
+                Console.ForegroundColor = ConsoleColor.White;
                 //clear screen
                 Console.Clear();
                 //Label information
@@ -20,6 +21,7 @@ namespace Measurement_Converter_Console.Functionality
                 Console.WriteLine("\n");
                 Console.WriteLine("---------------------------------------------------------------------------------------");
                 Console.WriteLine("\n");
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine("1 : Use same algorithm to calculate a new number");
                 Console.WriteLine("\n");
                 Console.WriteLine("2 : Go to option menu");

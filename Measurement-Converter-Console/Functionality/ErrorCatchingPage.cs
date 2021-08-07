@@ -13,6 +13,7 @@ namespace Measurement_Converter_Console.Functionality
         {
             try
             {
+                Console.ForegroundColor = ConsoleColor.White;
                 //clearconsole
                 Console.Clear();
                 //show error message
@@ -21,6 +22,7 @@ namespace Measurement_Converter_Console.Functionality
                 Console.WriteLine("\n");
                 Console.WriteLine("---------------------------------------------------------------------------------------");
                 Console.WriteLine("\n");
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 // give further instructions
                 Console.WriteLine("Hit enter to go to the main page");
                 ErrorLoggingObj DTO = new ErrorLoggingObj();

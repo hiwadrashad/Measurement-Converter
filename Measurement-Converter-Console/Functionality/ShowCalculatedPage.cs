@@ -16,10 +16,12 @@ namespace Measurement_Converter_Console.Functionality
                 //clear screen
                 Console.Clear();
                 //label information
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine("\n");
                 Console.WriteLine("The converted value is :");
                 Console.WriteLine("\n");
                 Console.WriteLine("---------------------------------------------------------------------------------------");
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine("\n");
                 if (DTO.type == Measurement_Converter_Library.Enums.ConversionType.CentimeterToMeter)
                 {

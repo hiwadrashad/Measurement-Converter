@@ -17,6 +17,7 @@ namespace Measurement_Converter_Console.Functionality
             {
                 //clearconsole
                 Console.Clear();
+                Console.ForegroundColor = ConsoleColor.White;
                 //attend on formatting
                 Console.WriteLine("\n");
                 Console.WriteLine("Format of input should be US based, example: 10,000.96");
@@ -24,6 +25,7 @@ namespace Measurement_Converter_Console.Functionality
                 Console.WriteLine("Fill in the value to convert");
                 Console.WriteLine("\n");
                 Console.WriteLine("---------------------------------------------------------------------------------------");
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine("\n");
                 string input = Console.ReadLine();
                 Console.WriteLine("\n");

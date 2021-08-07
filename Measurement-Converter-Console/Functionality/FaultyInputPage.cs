@@ -14,12 +14,14 @@ namespace Measurement_Converter_Console.Functionality
             {
                 //clearconsole
                 Console.Clear();
+                Console.ForegroundColor = ConsoleColor.White;
                 //show error message
                 Console.WriteLine("\n");
                 Console.WriteLine("Please enter a proper value!");
                 Console.WriteLine("\n");
                 Console.WriteLine("---------------------------------------------------------------------------------------");
                 Console.WriteLine("\n");
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 // give further instructions
                 Console.WriteLine("Hit enter to go to the main page");
                 Console.ReadLine();
