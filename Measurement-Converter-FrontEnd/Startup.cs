@@ -29,6 +29,10 @@ namespace Measurement_Converter_FrontEnd
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddHttpClient<IResultDataService, ResultdataService>(client =>
+            {
+                client.BaseAddress = new Uri("https://localhost:44386/");
+            });
             services.AddHttpClient<ITestDataService, TestDataService>(client =>
             {
                 client.BaseAddress = new Uri("https://localhost:44386/");
@@ -66,7 +70,7 @@ namespace Measurement_Converter_FrontEnd
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Page}/{action=ShowValuePage}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

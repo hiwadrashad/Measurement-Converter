@@ -1,14 +1,14 @@
-﻿@model Measurement_Converter_FrontEnd.Models.TestModel
+﻿@model Measurement_Converter_Library.DTOs.ConversionTypeResult
 <div class="text-center">
     <h1>testthis</h1>
     <form asp-action="Index" asp-controller="Home">
         <div>
-            <input asp-for="Name" type="text">
+            <input asp-for="value" type="text">
         </div>
         <div>
             <input type="submit" value="postthis" />
         </div>
     </form>
-    <label>@Model.Name</label>
+    <label>@Model.value</label>
 
 </div>

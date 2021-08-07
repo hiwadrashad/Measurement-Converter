@@ -1,4 +1,5 @@
 ﻿using Measurement_Converter_FrontEnd.Models;
+using Measurement_Converter_Library.DTOs;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -21,11 +22,11 @@ namespace Measurement_Converter_FrontEnd.Controllers
         }
 
         // GET api/<APIController>/5
-        [HttpGet("{id}")]
-        public IActionResult Get(string id)
+        [HttpGet("{value}")]
+        public IActionResult Get(double value)
         {
-            TestModel item = new TestModel();
-            item.Name = id;
+            ConversionTypeResult item = new ConversionTypeResult();
+            item.value = value;
             return Ok(item);
         }
 

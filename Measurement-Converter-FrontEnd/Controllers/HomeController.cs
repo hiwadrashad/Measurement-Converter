@@ -18,30 +18,33 @@ namespace Measurement_Converter_FrontEnd.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly ITestDataService _testDataService;
         private readonly ILoggingRepository _loggingRepository;
+        private readonly IResultDataService _resultDataService;
 
-        public HomeController(ILogger<HomeController> logger, ITestDataService dataService, ILoggingRepository loggingRepository)
+        public HomeController(ILogger<HomeController> logger, ITestDataService dataService, ILoggingRepository loggingRepository, IResultDataService resultDataService)
         {
             _logger = logger;
             _testDataService = dataService;
             _loggingRepository = loggingRepository;
+            _resultDataService = resultDataService;
         }
 
         public IActionResult Index()
         {
-            TestModel item = new TestModel();
-            item.Name = "";
+            ConversionTypeResult item = new ConversionTypeResult();
+            item.value = 0;
             return View(item);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Index(TestModel item)
+        public async Task<IActionResult> Index(ConversionTypeResult item)
         {
-            LoggingObj log = new LoggingObj();
-            log.Calculation = "testthis";
-            _loggingRepository.Add(log);
-            var returnedlog = _loggingRepository.GetFirstLog();
-            item.Name = returnedlog;
-            item.Name = (await _testDataService.Get("something")).Name;
+            //LoggingObj log = new LoggingObj();
+            //log.Calculation = "testthis";
+            //_loggingRepository.Add(log);
+            //var returnedlog = _loggingRepository.GetFirstLog();
+            //item.Name = returnedlog;
+
+            item.value = (await _resultDataService.Get(100)).value;
             return View(item);
         }
 
