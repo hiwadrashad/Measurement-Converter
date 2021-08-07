@@ -1,6 +1,8 @@
 ﻿using Measurement_Converter_FrontEnd.DataService;
 using Measurement_Converter_FrontEnd.Interfaces;
 using Measurement_Converter_FrontEnd.Models;
+using Measurement_Converter_Library.DTOs;
+using Measurement_Converter_Library.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -15,11 +17,13 @@ namespace Measurement_Converter_FrontEnd.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly ITestDataService _testDataService;
+        private readonly ILoggingRepository _loggingRepository;
 
-        public HomeController(ILogger<HomeController> logger, ITestDataService dataService)
+        public HomeController(ILogger<HomeController> logger, ITestDataService dataService, ILoggingRepository loggingRepository)
         {
             _logger = logger;
             _testDataService = dataService;
+            _loggingRepository = loggingRepository;
         }
 
         public IActionResult Index()
@@ -32,7 +36,12 @@ namespace Measurement_Converter_FrontEnd.Controllers
         [HttpPost]
         public async Task<IActionResult> Index(TestModel item)
         {
-            item.Name = (await _testDataService.Get("something")).Name;
+            LoggingObj log = new LoggingObj();
+            log.Calculation = "testthis";
+            _loggingRepository.Add(log);
+            var returnedlog = _loggingRepository.GetFirstLog();
+            item.Name = returnedlog;
+            //item.Name = (await _testDataService.Get("something")).Name;
             return View(item);
         }
 
