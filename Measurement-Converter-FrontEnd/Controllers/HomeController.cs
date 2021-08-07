@@ -41,7 +41,7 @@ namespace Measurement_Converter_FrontEnd.Controllers
             _loggingRepository.Add(log);
             var returnedlog = _loggingRepository.GetFirstLog();
             item.Name = returnedlog;
-            //item.Name = (await _testDataService.Get("something")).Name;
+            item.Name = (await _testDataService.Get("something")).Name;
             return View(item);
         }
 
