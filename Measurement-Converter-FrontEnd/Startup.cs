@@ -66,7 +66,7 @@ namespace Measurement_Converter_FrontEnd
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Page}/{action=EndPage}/{id?}");
+                    pattern: "{controller=Page}/{action=ShowValuePage}/{id?}");
             });
         }
     }
