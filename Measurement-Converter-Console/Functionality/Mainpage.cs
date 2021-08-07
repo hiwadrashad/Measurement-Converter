@@ -75,7 +75,7 @@ namespace Measurement_Converter_Console.Functionality
                 }
                 if (input.KeyChar == '7')
                 {
-                    Environment.FailFast("Terminated program");
+                    Environment.Exit(0);
                 }
             }
 #pragma warning disable CS0168 // Variable is declared but never used

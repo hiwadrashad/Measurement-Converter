@@ -12,10 +12,10 @@ namespace Measurement_Converter_Console.Functionality
         {
             try
             {
-                Console.ForegroundColor = ConsoleColor.White;
                 //clear screen
                 Console.Clear();
                 //Label information
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("\n");
                 Console.WriteLine(" Choose one of the following option to continue, fill in the appropriate number");
                 Console.WriteLine("\n");
@@ -43,7 +43,7 @@ namespace Measurement_Converter_Console.Functionality
                 }
                 if (input.KeyChar == '3')
                 {
-                    Environment.FailFast("Terminated program");
+                    Environment.Exit(0);
                 }
             }
 #pragma warning disable CS0168 // Variable is declared but never used

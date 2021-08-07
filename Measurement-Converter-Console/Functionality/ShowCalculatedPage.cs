@@ -16,7 +16,7 @@ namespace Measurement_Converter_Console.Functionality
                 //clear screen
                 Console.Clear();
                 //label information
-                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("\n");
                 Console.WriteLine("The converted value is :");
                 Console.WriteLine("\n");
