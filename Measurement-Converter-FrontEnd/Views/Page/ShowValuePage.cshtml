@@ -145,66 +145,67 @@
                                 <div id="desc-tabs" class="desc-tabs">
 
 
+                                    <form asp-action="ShowValuePage" asp-controller="Page">
+                                        <!-- Tab panes -->
+                                        <div class="tab-content">
 
-                                    <!-- Tab panes -->
-                                    <div class="tab-content">
+                                            <div role="tabpanel" class="tab-pane active fade in" id="tours">
+                                                <div class="tab-para">
 
-                                        <div role="tabpanel" class="tab-pane active fade in" id="tours">
-                                            <div class="tab-para">
-
-                                                <div class="row">
-                                                    <div class="col-lg-4 col-md-4 col-sm-12 ">
-                                                        <div class="single-tab-select-box">
-
-
-
-                                                            <input type="text" class="form-control textinput ">
+                                                    <div class="row">
+                                                        <div class="col-lg-4 col-md-4 col-sm-12 ">
+                                                            <div class="single-tab-select-box">
 
 
 
-                                                            </input><!-- /.select-->
+                                                                <input type="text" class="form-control textinput ">
 
 
 
-                                                        </div><!--/.single-tab-select-box-->
-                                                    </div><!--/.col-->
+                                                                </input><!-- /.select-->
 
 
 
-                                                    <div class="col-lg-2 col-md-3 col-sm-4 textlabel">
-                                                        <div class="single-tab-select-box">
-                                                            <h2 class="value-text">The converted value is : @Model.DTO.value</h2>
-                                                        </div>
-                                                    </div><!--/.col-->
+                                                            </div><!--/.single-tab-select-box-->
+                                                        </div><!--/.col-->
+
+
+
+                                                        <div class="col-lg-2 col-md-3 col-sm-4 textlabel">
+                                                            <div class="single-tab-select-box">
+                                                                <h2 class="value-text">The converted value is : @Model.DTO.value</h2>
+                                                            </div>
+                                                        </div><!--/.col-->
 
 
 
 
-                                                </div><!--/.row-->
+                                                    </div><!--/.row-->
 
-                                                <div class="row">
-                                                    <div class="col-sm-5">
-                                                        <div class="travel-budget">
+                                                    <div class="row">
+                                                        <div class="col-sm-5">
+                                                            <div class="travel-budget">
 
-                                                        </div><!--/.travel-budget-->
-                                                    </div><!--/.col-->
-                                                    <div class="clo-sm-7">
-                                                        <div class="about-btn travel-mrt-0 pull-right">
-                                                            <button class="about-view travel-btn">
-                                                                Continue
-                                                            </button><!--/.travel-btn-->
-                                                        </div><!--/.about-btn-->
-                                                    </div><!--/.col-->
+                                                            </div><!--/.travel-budget-->
+                                                        </div><!--/.col-->
+                                                        <div class="clo-sm-7">
+                                                            <div class="about-btn travel-mrt-0 pull-right">
+                                                                <button class="about-view travel-btn">
+                                                                    Continue
+                                                                </button><!--/.travel-btn-->
+                                                            </div><!--/.about-btn-->
+                                                        </div><!--/.col-->
 
-                                                </div><!--/.row-->
+                                                    </div><!--/.row-->
 
-                                            </div><!--/.tab-para-->
+                                                </div><!--/.tab-para-->
 
-                                        </div><!--/.tabpannel-->
+                                            </div><!--/.tabpannel-->
 
 
 
-                                    </div><!--/.col-->
+                                        </div><!--/.col-->
+                                    </form>
                                 </div><!--/.row-->
                             </div><!--/.container-->
 

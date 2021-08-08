@@ -32,7 +32,13 @@
 
 
     .textlabel {
-        transform: translate(-3vw,3vw) !important;
+        transform: translate(-3vw,3vw);
+    }
+
+    @@media screen and (min-width: 1367px) {
+        .textlabel {
+            transform: translate(3vw,3vw) !important;
+        }
     }
 
     @@media screen and (max-width: 1367px) {

@@ -38,11 +38,9 @@ namespace Measurement_Converter_FrontEnd.Controllers
         [HttpPost]
         public async Task<IActionResult> Index(ConversionTypeResult item)
         {
-            //LoggingObj log = new LoggingObj();
-            //log.Calculation = "testthis";
-            //_loggingRepository.Add(log);
-            //var returnedlog = _loggingRepository.GetFirstLog();
-            //item.Name = returnedlog;
+            LoggingObj log = new LoggingObj();
+            log.Calculation = "testthis";
+            _loggingRepository.Add(log);
 
             item.value = (await _resultDataService.Get(100)).value;
             return View(item);
