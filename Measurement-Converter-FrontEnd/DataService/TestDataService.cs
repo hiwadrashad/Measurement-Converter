@@ -1,5 +1,4 @@
-﻿using Measurement_Converter_FrontEnd.Interfaces;
-using Measurement_Converter_FrontEnd.Models;
+﻿using Measurement_Converter_FrontEnd.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Measurement_Converter_FrontEnd.DataService
 {
-    public class TestDataService : ITestDataService
+    public class TestDataService
     {
         private readonly HttpClient _httpClient;
         public TestDataService(HttpClient httpClient)

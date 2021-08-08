@@ -1,6 +1,5 @@
 using Measurement_Converter_FrontEnd.Database;
 using Measurement_Converter_FrontEnd.DataService;
-using Measurement_Converter_FrontEnd.Interfaces;
 using Measurement_Converter_FrontEnd.Repository;
 using Measurement_Converter_Library.Interfaces;
 using Microsoft.AspNetCore.Builder;
@@ -30,10 +29,6 @@ namespace Measurement_Converter_FrontEnd
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddHttpClient<IResultDataService, ResultdataService>(client =>
-            {
-                client.BaseAddress = new Uri("https://localhost:44386/");
-            });
-            services.AddHttpClient<ITestDataService, TestDataService>(client =>
             {
                 client.BaseAddress = new Uri("https://localhost:44386/");
             });
