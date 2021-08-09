@@ -10,6 +10,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Measurement_Converter_Library.ExtensionMethods;
 using Measurement_Converter_Library.Interfaces;
+using Measurement_Converter_Library.ServiceLocator;
 
 namespace Measurement_Converter_FrontEnd.Controllers
 {
@@ -247,10 +248,12 @@ namespace Measurement_Converter_FrontEnd.Controllers
 
                 //logging commented out
 
-                //LoggingObj log = new LoggingObj();
-                //log.Calculation = VM.DTO.value + " " + VM.DTO.type;
-                //log.Date = DateTime.Now.ToString();
-                //_loggingRepository.Add(log);
+                LoggingObj log = new LoggingObj();
+                log.Calculation = VM.DTO.value + " " + VM.DTO.type;
+                log.Date = DateTime.Now.ToString();
+                Measurement_Converter_Library.Interfaces.IFactoryServiceLocator factoryServiceLocator = FactoryServiceLocator.GetFactoryService();
+                var FactorySL = factoryServiceLocator.GetService<IPreMVCRepo>();
+                _loggingRepository.Add(log);
 
                 TempData.Put("value", VM);
                 return View("Endpage");

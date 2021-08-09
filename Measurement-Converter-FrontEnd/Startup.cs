@@ -1,6 +1,5 @@
 using Measurement_Converter_FrontEnd.Database;
 using Measurement_Converter_FrontEnd.DataService;
-using Measurement_Converter_FrontEnd.Repository;
 using Measurement_Converter_Library.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;

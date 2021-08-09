@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Measurement_Converter_FrontEnd.Repository
+namespace Measurement_Converter_Library.Repository
 {
     public class LoggingRepository : ILoggingRepository, IPreMVCRepo
     {

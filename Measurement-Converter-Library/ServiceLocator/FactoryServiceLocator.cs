@@ -20,6 +20,7 @@ namespace Measurement_Converter_Library.ServiceLocator
 			services = new Dictionary<object, object>();
 			// fill the map
 			this.services.Add(typeof(IPreConsoleRepo), new Measurement_Converter_Library.Repository.ConsoleLoggingRepository());
+			//this.services.Add(typeof(IPreMVCRepo), new Measurement_Converter_Library.Repository.LoggingRepository());
 
 		}
 
