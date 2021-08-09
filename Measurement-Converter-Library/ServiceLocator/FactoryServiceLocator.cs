@@ -12,14 +12,25 @@ namespace Measurement_Converter_Library.ServiceLocator
     {
 		// references to concrete implementations
 		private IDictionary<object, object> services;
-		
+
+		private static FactoryServiceLocator factoryServiceLocator;
 
 		public FactoryServiceLocator()
 		{
 			services = new Dictionary<object, object>();
 			// fill the map
-			this.services.Add(typeof(IFactoryConsoleParameter), new Measurement_Converter_Library.Repository.ConsoleLoggingRepository());
+			this.services.Add(typeof(IPreConsoleRepo), new Measurement_Converter_Library.Repository.ConsoleLoggingRepository());
 
+		}
+
+		public static FactoryServiceLocator GetFactoryService()
+		{
+			if (factoryServiceLocator == null)
+			{
+				factoryServiceLocator = new FactoryServiceLocator();
+			}
+
+			return factoryServiceLocator;
 		}
 
 		public T GetService<T>()

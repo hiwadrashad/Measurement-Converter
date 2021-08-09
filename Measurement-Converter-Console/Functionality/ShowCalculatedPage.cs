@@ -37,10 +37,9 @@ namespace Measurement_Converter_Console.Functionality
                     LoggingObj log = new LoggingObj();
                     log.Calculation = DTO.value + " " + "Meter" + " : " + DTO.type;
                     log.Date = DateTime.Now.ToString();
-                    Measurement_Converter_Library.Interfaces.IFactoryServiceLocator factoryServiceLocator = new FactoryServiceLocator();
-                    var FactorySL = factoryServiceLocator.GetService<IFactoryConsoleParameter>();
-                    FactorySL.Log(log);
-                    _factoryConsolParameter.Log(log);
+                    Measurement_Converter_Library.Interfaces.IFactoryServiceLocator factoryServiceLocator = FactoryServiceLocator.GetFactoryService();
+                    var FactorySL = factoryServiceLocator.GetService<IPreConsoleRepo>();
+                    FactorySL.Add(log);
                     Measurement_Converter_Library.Logging.ConsoleLogging.WriteCalculationLog(log);
                     Console.WriteLine(DTO.value + " " + "Meter");
                 }
@@ -49,7 +48,9 @@ namespace Measurement_Converter_Console.Functionality
                     LoggingObj log = new LoggingObj();
                     log.Calculation = DTO.value + " " + "Millimeter" + " : " + DTO.type;
                     log.Date = DateTime.Now.ToString();
-                    Measurement_Converter_Library.Logging.ConsoleLogging.WriteCalculationLog(log);
+                    Measurement_Converter_Library.Interfaces.IFactoryServiceLocator factoryServiceLocator = FactoryServiceLocator.GetFactoryService();
+                    var FactorySL = factoryServiceLocator.GetService<IPreConsoleRepo>();
+                    FactorySL.Add(log);
                     Console.WriteLine(DTO.value + " " + "Millimeter");
                 }
                 if (DTO.type == Measurement_Converter_Library.Enums.ConversionType.InchToMeter)
@@ -57,32 +58,36 @@ namespace Measurement_Converter_Console.Functionality
                     LoggingObj log = new LoggingObj();
                     log.Calculation = DTO.value + " " + "Meter" + " : " + DTO.type;
                     log.Date = DateTime.Now.ToString();
-                    Measurement_Converter_Library.Logging.ConsoleLogging.WriteCalculationLog(log);
-                    Console.WriteLine(DTO.value + " " + "Meter");
+                    Measurement_Converter_Library.Interfaces.IFactoryServiceLocator factoryServiceLocator = FactoryServiceLocator.GetFactoryService();
+                    var FactorySL = factoryServiceLocator.GetService<IPreConsoleRepo>();
+                    FactorySL.Add(log); Console.WriteLine(DTO.value + " " + "Meter");
                 }
                 if (DTO.type == Measurement_Converter_Library.Enums.ConversionType.MeterToCentimeter)
                 {
                     LoggingObj log = new LoggingObj();
                     log.Calculation = DTO.value + " " + "Centimeter" + " : " + DTO.type;
                     log.Date = DateTime.Now.ToString();
-                    Measurement_Converter_Library.Logging.ConsoleLogging.WriteCalculationLog(log);
-                    Console.WriteLine(DTO.value + " " + "Centimeter");
+                    Measurement_Converter_Library.Interfaces.IFactoryServiceLocator factoryServiceLocator = FactoryServiceLocator.GetFactoryService();
+                    var FactorySL = factoryServiceLocator.GetService<IPreConsoleRepo>();
+                    FactorySL.Add(log); Console.WriteLine(DTO.value + " " + "Centimeter");
                 }
                 if (DTO.type == Measurement_Converter_Library.Enums.ConversionType.MeterToInch)
                 {
                     LoggingObj log = new LoggingObj();
                     log.Calculation = DTO.value + " " + "Inch" + " : " + DTO.type;
                     log.Date = DateTime.Now.ToString();
-                    Measurement_Converter_Library.Logging.ConsoleLogging.WriteCalculationLog(log);
-                    Console.WriteLine(DTO.value + " " + "Inch");
+                    Measurement_Converter_Library.Interfaces.IFactoryServiceLocator factoryServiceLocator = FactoryServiceLocator.GetFactoryService();
+                    var FactorySL = factoryServiceLocator.GetService<IPreConsoleRepo>();
+                    FactorySL.Add(log); Console.WriteLine(DTO.value + " " + "Inch");
                 }
                 if (DTO.type == Measurement_Converter_Library.Enums.ConversionType.MillimeterToCentimeter)
                 {
                     LoggingObj log = new LoggingObj();
                     log.Calculation = DTO.value + " " + "Centimeter" + " : " + DTO.type;
                     log.Date = DateTime.Now.ToString();
-                    Measurement_Converter_Library.Logging.ConsoleLogging.WriteCalculationLog(log);
-                    Console.WriteLine(DTO.value + " " + "Centimeter");
+                    Measurement_Converter_Library.Interfaces.IFactoryServiceLocator factoryServiceLocator = FactoryServiceLocator.GetFactoryService();
+                    var FactorySL = factoryServiceLocator.GetService<IPreConsoleRepo>();
+                    FactorySL.Add(log); Console.WriteLine(DTO.value + " " + "Centimeter");
                 }
                 Console.WriteLine("\n");
                 Console.WriteLine("Hit enter to continue");
