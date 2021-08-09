@@ -14,7 +14,7 @@ namespace Measurement_Converter_Library.Factory
 
 
         public void Log(LoggingObj DTO)
-        { 
+        {
             var Repo = FactoryRepo();
             Repo.Add(DTO);
         }

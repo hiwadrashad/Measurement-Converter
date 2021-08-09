@@ -1,4 +1,7 @@
 ﻿using Measurement_Converter_Library.DTOs;
+using Measurement_Converter_Library.Factory;
+using Measurement_Converter_Library.Interfaces;
+using Measurement_Converter_Library.ServiceLocator;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +12,12 @@ namespace Measurement_Converter_Console.Functionality
 {
     public class ShowCalculatedPage
     {
+        private readonly IFactoryConsoleParameter _factoryConsolParameter;
+        public ShowCalculatedPage(IFactoryConsoleParameter factoryConsoleParameter)
+        {
+            _factoryConsolParameter = factoryConsoleParameter;
+        }
+
         public static void ExecuteShowCalculation(ConversionTypeResult DTO)
         {
             try
@@ -28,7 +37,10 @@ namespace Measurement_Converter_Console.Functionality
                     LoggingObj log = new LoggingObj();
                     log.Calculation = DTO.value + " " + "Meter" + " : " + DTO.type;
                     log.Date = DateTime.Now.ToString();
-                    
+                    Measurement_Converter_Library.Interfaces.IFactoryServiceLocator factoryServiceLocator = new FactoryServiceLocator();
+                    var FactorySL = factoryServiceLocator.GetService<IFactoryConsoleParameter>();
+                    FactorySL.Log(log);
+                    _factoryConsolParameter.Log(log);
                     Measurement_Converter_Library.Logging.ConsoleLogging.WriteCalculationLog(log);
                     Console.WriteLine(DTO.value + " " + "Meter");
                 }

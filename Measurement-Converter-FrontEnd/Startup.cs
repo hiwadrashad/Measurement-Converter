@@ -15,6 +15,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Measurement_Converter_Library.ExtensionMethods;
 using Measurement_Converter_Library.Factory;
+using Measurement_Converter_Library.Factory.Parameters;
+using Measurement_Converter_Library.Repository;
 
 namespace Measurement_Converter_FrontEnd
 {
@@ -41,6 +43,9 @@ namespace Measurement_Converter_FrontEnd
             Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<ILoggingRepository, LoggingRepository>();
             services.AddScoped<IFactoryConsoleParameter, FactoryConsoleParameter>();
+            services.AddScoped<IFactoryMVCParameter, FactoryMVCParameter>();
+            services.AddScoped<IPreConsoleRepo, ConsoleLoggingRepository>();
+            services.AddScoped<IPreMVCRepo, LoggingRepository>();
             services.AddDI();
 
         }

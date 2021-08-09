@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Measurement_Converter_Library.Factory
 {
-    public class FactoryConsoleParameter : LoggingFactory, IFactoryConsoleParameter
+    public class FactoryConsoleParameter : LoggingFactory , IFactoryConsoleParameter 
     {
         private ILoggingRepository _logginRepository;
         private IPreConsoleRepo _preConsoleRepo;
