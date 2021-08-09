@@ -13,6 +13,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Measurement_Converter_Library.ExtensionMethods;
+using Measurement_Converter_Library.Factory;
 
 namespace Measurement_Converter_FrontEnd
 {
@@ -33,12 +35,14 @@ namespace Measurement_Converter_FrontEnd
                 client.BaseAddress = new Uri("https://localhost:44386/");
             });
             services.AddControllersWithViews();
-
             //below added to scaffolding
             services.AddDbContext<LoggingDbContext>(options =>
             options.UseSqlServer(
             Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<ILoggingRepository, LoggingRepository>();
+            services.AddScoped<IFactoryConsoleParameter, FactoryConsoleParameter>();
+            services.AddDI();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

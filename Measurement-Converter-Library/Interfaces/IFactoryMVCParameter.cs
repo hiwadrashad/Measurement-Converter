@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace Measurement_Converter_Library.Interfaces
 {
-    public interface ILoggingRepository
+    public interface IFactoryMVCParameter
     {
-        void Add(LoggingObj DTO);
-        void AddError(ErrorLoggingObj DTO);
-        string GetFirstLog();
+        ILoggingRepository FactoryRepo();
+        void Log(LoggingObj DTO);
+        void ErrorLog(ErrorLoggingObj DTO);
     }
 }

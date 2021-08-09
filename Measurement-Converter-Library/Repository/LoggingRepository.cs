@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Measurement_Converter_FrontEnd.Repository
 {
-    public class LoggingRepository : ILoggingRepository
+    public class LoggingRepository : ILoggingRepository, IPreMVCRepo
     {
         private readonly LoggingDbContext _loggingDbContext;
 
@@ -21,6 +21,11 @@ namespace Measurement_Converter_FrontEnd.Repository
         {
             _loggingDbContext.Logs.Add(DTO);
             _loggingDbContext.SaveChanges();
+        }
+
+        public void AddError(ErrorLoggingObj DTO)
+        {
+            throw new NotImplementedException();
         }
 
         public string GetFirstLog()

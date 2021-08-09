@@ -26,15 +26,16 @@ namespace Measurement_Converter_Console.Functionality
                 if (DTO.type == Measurement_Converter_Library.Enums.ConversionType.CentimeterToMeter)
                 {
                     LoggingObj log = new LoggingObj();
-                    log.Calculation = DTO.value + " " + "Meter" + " : " + nameof(DTO.type);
+                    log.Calculation = DTO.value + " " + "Meter" + " : " + DTO.type;
                     log.Date = DateTime.Now.ToString();
+                    
                     Measurement_Converter_Library.Logging.ConsoleLogging.WriteCalculationLog(log);
                     Console.WriteLine(DTO.value + " " + "Meter");
                 }
                 if (DTO.type == Measurement_Converter_Library.Enums.ConversionType.CentimeterToMillimeter)
                 {
                     LoggingObj log = new LoggingObj();
-                    log.Calculation = DTO.value + " " + "Millimeter" + " : " + nameof(DTO.type);
+                    log.Calculation = DTO.value + " " + "Millimeter" + " : " + DTO.type;
                     log.Date = DateTime.Now.ToString();
                     Measurement_Converter_Library.Logging.ConsoleLogging.WriteCalculationLog(log);
                     Console.WriteLine(DTO.value + " " + "Millimeter");
@@ -42,7 +43,7 @@ namespace Measurement_Converter_Console.Functionality
                 if (DTO.type == Measurement_Converter_Library.Enums.ConversionType.InchToMeter)
                 {
                     LoggingObj log = new LoggingObj();
-                    log.Calculation = DTO.value + " " + "Meter" + " : " + nameof(DTO.type);
+                    log.Calculation = DTO.value + " " + "Meter" + " : " + DTO.type;
                     log.Date = DateTime.Now.ToString();
                     Measurement_Converter_Library.Logging.ConsoleLogging.WriteCalculationLog(log);
                     Console.WriteLine(DTO.value + " " + "Meter");
@@ -50,7 +51,7 @@ namespace Measurement_Converter_Console.Functionality
                 if (DTO.type == Measurement_Converter_Library.Enums.ConversionType.MeterToCentimeter)
                 {
                     LoggingObj log = new LoggingObj();
-                    log.Calculation = DTO.value + " " + "Centimeter" + " : " + nameof(DTO.type);
+                    log.Calculation = DTO.value + " " + "Centimeter" + " : " + DTO.type;
                     log.Date = DateTime.Now.ToString();
                     Measurement_Converter_Library.Logging.ConsoleLogging.WriteCalculationLog(log);
                     Console.WriteLine(DTO.value + " " + "Centimeter");
@@ -58,7 +59,7 @@ namespace Measurement_Converter_Console.Functionality
                 if (DTO.type == Measurement_Converter_Library.Enums.ConversionType.MeterToInch)
                 {
                     LoggingObj log = new LoggingObj();
-                    log.Calculation = DTO.value + " " + "Inch" + " : " + nameof(DTO.type);
+                    log.Calculation = DTO.value + " " + "Inch" + " : " + DTO.type;
                     log.Date = DateTime.Now.ToString();
                     Measurement_Converter_Library.Logging.ConsoleLogging.WriteCalculationLog(log);
                     Console.WriteLine(DTO.value + " " + "Inch");
@@ -66,7 +67,7 @@ namespace Measurement_Converter_Console.Functionality
                 if (DTO.type == Measurement_Converter_Library.Enums.ConversionType.MillimeterToCentimeter)
                 {
                     LoggingObj log = new LoggingObj();
-                    log.Calculation = DTO.value + " " + "Centimeter" + " : " + nameof(DTO.type);
+                    log.Calculation = DTO.value + " " + "Centimeter" + " : " + DTO.type;
                     log.Date = DateTime.Now.ToString();
                     Measurement_Converter_Library.Logging.ConsoleLogging.WriteCalculationLog(log);
                     Console.WriteLine(DTO.value + " " + "Centimeter");

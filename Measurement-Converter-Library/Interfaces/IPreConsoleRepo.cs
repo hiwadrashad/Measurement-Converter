@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Measurement_Converter_Library.Interfaces
 {
-    public interface ILoggingRepository
+    public interface IPreConsoleRepo
     {
         void Add(LoggingObj DTO);
         void AddError(ErrorLoggingObj DTO);
